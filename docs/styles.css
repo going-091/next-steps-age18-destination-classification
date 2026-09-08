@@ -7,7 +7,7 @@ body {
   background: #ffffff;
   color: #172022;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 
@@ -19,10 +19,10 @@ body {
 }
 
 .site-header-inner {
-  width: min(1590px, calc(100% - 88px));
-  min-height: 70px;
+  width: min(1500px, calc(100% - 72px));
+  min-height: 60px;
   margin: 0 auto;
-  padding: 14px 0;
+  padding: 11px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,14 +31,14 @@ body {
 .project-identity {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: clamp(0.95rem, 1.15vw, 1.25rem);
+  gap: 10px;
+  font-size: clamp(0.9rem, 1vw, 1.08rem);
 }
 
 .project-identity::before {
   content: "";
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   flex: 0 0 auto;
   border-radius: 50%;
   background: #07999d;
@@ -49,14 +49,14 @@ body {
 }
 
 .project-overview {
-  font-size: clamp(0.95rem, 1.15vw, 1.2rem);
+  font-size: clamp(0.9rem, 1vw, 1.05rem);
 }
 
 
 /* Main */
 
 main {
-  width: min(1508px, calc(100% - 96px));
+  width: min(1420px, calc(100% - 80px));
   margin: 0 auto;
 }
 
@@ -64,14 +64,14 @@ main {
 /* Project title */
 
 .hero {
-  padding: 34px 0 42px;
+  padding: 28px 0 34px;
 }
 
 .eyebrow,
 .section-eyebrow {
-  margin: 0 0 11px;
+  margin: 0 0 9px;
   color: #16575b;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -79,9 +79,9 @@ main {
 
 h1 {
   margin: 0;
-  max-width: 1400px;
+  max-width: 1250px;
   color: #07191d;
-  font-size: clamp(2.45rem, 3.7vw, 3.9rem);
+  font-size: clamp(2.15rem, 3.2vw, 3.3rem);
   line-height: 1.08;
   letter-spacing: -0.035em;
 }
@@ -89,17 +89,17 @@ h1 {
 h1::after {
   content: "";
   display: block;
-  width: 68px;
-  height: 4px;
-  margin-top: 18px;
+  width: 60px;
+  height: 3px;
+  margin-top: 14px;
   background: #15878a;
 }
 
 .subtitle {
-  margin: 18px 0 0;
+  margin: 14px 0 0;
   color: #485256;
-  font-size: clamp(1rem, 1.35vw, 1.3rem);
-  line-height: 1.5;
+  font-size: clamp(0.95rem, 1.15vw, 1.12rem);
+  line-height: 1.45;
 }
 
 .subtitle em {
@@ -110,88 +110,92 @@ h1::after {
 /* Story */
 
 .story-section {
-  padding: 44px 0 52px;
+  padding: 34px 0 40px;
   border-top: 1px solid #d9e1e1;
 }
 
 .section-title {
-  margin: 0 0 22px;
+  margin: 0 0 18px;
   color: #07191d;
-  font-size: clamp(1.8rem, 2.5vw, 2.55rem);
+  font-size: clamp(1.65rem, 2.15vw, 2.15rem);
   line-height: 1.15;
 }
 
 .story-text {
-  max-width: 1050px;
+  max-width: 980px;
   color: #374447;
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 0.94rem;
+  line-height: 1.6;
 }
 
 .story-text p {
-  margin: 0 0 15px;
+  margin: 0 0 12px;
 }
 
 .thought-path {
-  max-width: 1100px;
-  margin-top: 28px;
-  padding: 22px 26px;
+  max-width: 1020px;
+  margin-top: 22px;
+  padding: 17px 21px;
   border-left: 4px solid #15878a;
   background: #f5f8f8;
 }
 
 .thought-path h3 {
-  margin: 0 0 7px;
+  margin: 0 0 6px;
   color: #172022;
-  font-size: 1.18rem;
+  font-size: 1.05rem;
 }
 
 .thought-path p {
-  margin: 0 0 13px;
+  margin: 0 0 10px;
   color: #566164;
-  font-size: 0.98rem;
-  line-height: 1.55;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .thought-path ul {
   margin: 0;
-  padding-left: 20px;
+  padding-left: 18px;
 }
 
 .thought-path li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: #374447;
-  font-size: 0.98rem;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.thought-path li:last-child {
+  margin-bottom: 0;
 }
 
 
 /* Study at a glance */
 
 .study-section {
-  padding: 48px 0 48px;
+  padding: 36px 0 38px;
   border-top: 1px solid #d9e1e1;
 }
 
 .project-summary-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-  margin-top: 20px;
+  gap: 16px;
+  margin-top: 16px;
 }
 
 .summary-card {
-  min-height: 265px;
-  padding: 22px 24px;
+  min-height: 215px;
+  padding: 18px 20px;
   border: 1px solid #cbd3d4;
   border-radius: 10px;
   background: #ffffff;
 }
 
 .summary-icon {
-  width: 56px;
-  height: 56px;
-  margin-bottom: 14px;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 10px;
   color: #0a5054;
 }
 
@@ -206,36 +210,36 @@ h1::after {
 }
 
 .summary-value {
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   color: #0a5054;
-  font-size: clamp(2.5rem, 3.3vw, 3.25rem);
+  font-size: clamp(2rem, 2.7vw, 2.65rem);
   font-weight: 700;
   line-height: 1;
 }
 
 .summary-label {
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   color: #10191d;
-  font-size: clamp(1.05rem, 1.2vw, 1.22rem);
-  line-height: 1.3;
+  font-size: clamp(0.98rem, 1.05vw, 1.08rem);
+  line-height: 1.25;
 }
 
 .summary-detail {
   margin: 0;
   color: #455155;
-  font-size: clamp(0.92rem, 1.05vw, 1.05rem);
-  line-height: 1.4;
+  font-size: clamp(0.84rem, 0.92vw, 0.94rem);
+  line-height: 1.35;
 }
 
 
 /* Intended users */
 
 .project-audience {
-  max-width: 1100px;
-  margin: 20px auto 0;
+  max-width: 1000px;
+  margin: 16px auto 0;
   text-align: center;
   color: #172022;
-  font-size: clamp(0.95rem, 1.1vw, 1.08rem);
+  font-size: clamp(0.88rem, 0.95vw, 0.96rem);
 }
 
 .project-audience p {
@@ -246,13 +250,13 @@ h1::after {
 /* Safeguarded data */
 
 .data-protection-note {
-  margin-top: 10px;
+  margin-top: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 9px;
   color: #16575b;
-  font-size: clamp(0.92rem, 1vw, 1.02rem);
+  font-size: clamp(0.84rem, 0.9vw, 0.92rem);
 }
 
 .data-protection-note p {
@@ -260,8 +264,8 @@ h1::after {
 }
 
 .data-protection-icon {
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 26px;
   flex: 0 0 auto;
   color: #087074;
 }
@@ -280,7 +284,7 @@ h1::after {
 /* Research questions and workflow */
 
 .research-focus-section {
-  padding: 48px 0 54px;
+  padding: 36px 0 40px;
   border-top: 1px solid #d9e1e1;
 }
 
@@ -292,7 +296,7 @@ h1::after {
 .research-focus-figure img {
   display: block;
   width: 100%;
-  max-width: 1160px;
+  max-width: 1080px;
   height: auto;
 }
 
@@ -300,62 +304,62 @@ h1::after {
 /* Key findings */
 
 .key-findings-section {
-  padding: 52px 0 62px;
+  padding: 38px 0 44px;
   border-top: 1px solid #d9e1e1;
 }
 
 .key-findings-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  gap: 15px;
 }
 
 .finding-card {
-  padding: 22px;
+  padding: 18px;
   border: 1px solid #cbd3d4;
   border-radius: 10px;
   background: #ffffff;
 }
 
 .finding-highlight {
-  margin: 0 0 11px;
+  margin: 0 0 8px;
   color: #0a5054;
-  font-size: 1.18rem;
+  font-size: 1.04rem;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .finding-card h3 {
-  margin: 0 0 9px;
+  margin: 0 0 7px;
   color: #172022;
-  font-size: 1.08rem;
-  line-height: 1.3;
+  font-size: 0.98rem;
+  line-height: 1.25;
 }
 
 .finding-card p:last-child {
   margin: 0;
   color: #566164;
-  font-size: 0.94rem;
-  line-height: 1.5;
+  font-size: 0.86rem;
+  line-height: 1.45;
 }
 
 
 /* Explore the artefact */
 
 .explore-section {
-  padding: 52px 0 64px;
+  padding: 38px 0 48px;
   border-top: 1px solid #d9e1e1;
 }
 
 .explore-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  gap: 15px;
 }
 
 .explore-card {
   display: block;
-  padding: 22px;
+  padding: 18px;
   border: 1px solid #cbd3d4;
   border-radius: 10px;
   background: #ffffff;
@@ -375,22 +379,22 @@ h1::after {
 }
 
 .explore-card h3 {
-  margin: 0 0 9px;
+  margin: 0 0 7px;
   color: #172022;
-  font-size: 1.12rem;
-  line-height: 1.3;
+  font-size: 1rem;
+  line-height: 1.25;
 }
 
 .explore-card p {
-  margin: 0 0 15px;
+  margin: 0 0 11px;
   color: #566164;
-  font-size: 0.94rem;
-  line-height: 1.5;
+  font-size: 0.86rem;
+  line-height: 1.45;
 }
 
 .explore-card span {
   color: #0a6569;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 700;
 }
 
@@ -399,6 +403,10 @@ h1::after {
 
 @media (max-width: 1000px) {
 
+  main {
+    width: min(100% - 48px, 1420px);
+  }
+
   .project-summary-grid,
   .key-findings-grid,
   .explore-grid {
@@ -406,25 +414,25 @@ h1::after {
   }
 
   .summary-card {
-    min-height: 245px;
+    min-height: 195px;
   }
 }
 
 @media (max-width: 600px) {
 
   .site-header-inner {
-    width: min(100% - 32px, 1590px);
-    min-height: 64px;
+    width: min(100% - 28px, 1500px);
+    min-height: 58px;
   }
 
   .project-identity {
-    gap: 8px;
-    font-size: 0.9rem;
+    gap: 7px;
+    font-size: 0.82rem;
   }
 
   .project-identity::before {
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
   }
 
   .project-overview {
@@ -432,39 +440,39 @@ h1::after {
   }
 
   main {
-    width: min(100% - 32px, 1508px);
+    width: min(100% - 28px, 1420px);
   }
 
   .hero {
-    padding: 30px 0 36px;
+    padding: 26px 0 30px;
   }
 
   h1 {
-    font-size: 2.15rem;
+    font-size: 2rem;
   }
 
   .subtitle {
-    font-size: 1rem;
+    font-size: 0.94rem;
   }
 
   .story-section {
-    padding: 38px 0 44px;
+    padding: 30px 0 34px;
   }
 
   .section-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .thought-path {
-    margin-top: 24px;
-    padding: 19px 20px;
+    margin-top: 18px;
+    padding: 16px 18px;
   }
 
   .project-summary-grid,
   .key-findings-grid,
   .explore-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 12px;
   }
 
   .summary-card {
@@ -477,11 +485,11 @@ h1::after {
   }
 
   .research-focus-section {
-    padding: 36px 0 40px;
+    padding: 30px 0 34px;
   }
 
   .key-findings-section,
   .explore-section {
-    padding: 40px 0 46px;
+    padding: 32px 0 38px;
   }
 }
