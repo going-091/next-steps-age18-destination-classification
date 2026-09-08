@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Power BI Artefact | Age-18 Destinations</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .subpage-header {
+      padding: 52px 0 46px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: #0a6569;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .back-link:hover,
+    .back-link:focus {
+      text-decoration: underline;
+    }
+
+    .powerbi-intro {
+      max-width: 1000px;
+      margin-top: 28px;
+      color: #374447;
+      font-size: 1.08rem;
+      line-height: 1.75;
+    }
+
+    .powerbi-note {
+      max-width: 1050px;
+      margin-top: 30px;
+      padding: 24px 28px;
+      border-left: 4px solid #15878a;
+      background: #f5f8f8;
+      color: #374447;
+    }
+
+    .powerbi-note p {
+      margin: 0;
+    }
+
+    .report-section {
+      padding: 60px 0 70px;
+      border-top: 1px solid #d9e1e1;
+    }
+
+    .report-shot {
+      margin: 0 0 54px;
+    }
+
+    .report-shot:last-child {
+      margin-bottom: 0;
+    }
+
+    .report-shot h2 {
+      margin: 0 0 8px;
+      color: #07191d;
+      font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+    }
+
+    .report-shot p {
+      margin: 0 0 20px;
+      color: #566164;
+      font-size: 1rem;
+    }
+
+    .report-shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid #d9e1e1;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .subpage-header {
+        padding: 36px 0 40px;
+      }
+
+      .report-section {
+        padding: 42px 0 50px;
+      }
+
+      .powerbi-note {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+
+      <div class="project-identity">
+        <strong>UWE Bristol</strong>
+        <span class="header-divider">|</span>
+        <span>MSc Data Science</span>
+      </div>
+
+      <span class="project-overview">
+        Power BI Artefact
+      </span>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <section class="subpage-header">
+
+      <a class="back-link" href="index.html">
+        ← Back to project overview
+      </a>
+
+      <p class="section-eyebrow">
+        Power BI
+      </p>
+
+      <h1>
+        Interactive Reporting Artefact
+      </h1>
+
+      <div class="powerbi-intro">
+
+        <p>
+          The Power BI report was developed as the interactive reporting
+          component of the project, allowing selected aggregate findings to be
+          explored across model performance, destination-specific performance,
+          pre-endpoint activity histories and predictive information.
+        </p>
+
+      </div>
+
+
+      <div class="powerbi-note">
+
+        <p>
+          The report uses anonymised or pre-aggregated outputs.
+          Public interactive sharing was not available through the institutional
+          Power BI account, so static screenshots of the completed report are
+          presented here.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="report-section">
+
+      <div class="report-shot">
+
+        <h2>
+          Overview
+        </h2>
+
+        <p>
+          Project purpose, analytical sample and overall workflow.
+        </p>
+
+        <img
+          src="powerbi/overview.png"
+          alt="Power BI overview page showing the project purpose, modelling sample, predictors, predictor domains, destination classes and analytical workflow."
+        >
+
+      </div>
+
+
+      <div class="report-shot">
+
+        <h2>
+          1. Overall model performance
+        </h2>
+
+        <p>
+          Held-out model comparison across overall evaluation metrics.
+        </p>
+
+        <img
+          src="powerbi/page1_performance.png"
+          alt="Power BI page showing held-out overall model performance."
+        >
+
+      </div>
+
+
+      <div class="report-shot">
+
+        <h2>
+          2. Destination-specific performance
+        </h2>
+
+        <p>
+          Comparison of classification performance across the four age-18 destinations.
+        </p>
+
+        <img
+          src="powerbi/page2_destinations.png"
+          alt="Power BI page showing destination-specific classification performance."
+        >
+
+      </div>
+
+
+      <div class="report-shot">
+
+        <h2>
+          3. Pre-endpoint activity histories
+        </h2>
+
+        <p>
+          Descriptive comparison of activity histories preceding the age-18 destinations.
+        </p>
+
+        <img
+          src="powerbi/page3_histories.png"
+          alt="Power BI page showing pre-endpoint activity histories."
+        >
+
+      </div>
+
+
+      <div class="report-shot">
+
+        <h2>
+          4. Predictive information
+        </h2>
+
+        <p>
+          Predictor-domain contribution and destination-specific RF predictor attributions.
+        </p>
+
+        <img
+          src="powerbi/page4_predictors.png"
+          alt="Power BI page showing predictor-domain contribution and predictive information."
+        >
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+
+</html>

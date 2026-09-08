@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Predicting Age-18 Destinations Using Pre-Transition Characteristics</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+
+      <div class="project-identity">
+        <strong>UWE Bristol</strong>
+        <span class="header-divider">|</span>
+        <span>MSc Data Science</span>
+      </div>
+
+      <span class="project-overview">
+        MSc Project Overview
+      </span>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- Project title -->
+
+    <section class="hero">
+
+      <p class="eyebrow">
+        MSc Data Science Dissertation
+      </p>
+
+      <h1>
+        Predicting Age-18 Destinations<br>
+        Using Pre-Transition Characteristics
+      </h1>
+
+      <p class="subtitle">
+        <em>A Comparison of Multinomial Logistic Regression and Machine-Learning Models</em><br>
+        Using Next Steps (LSYPE1)
+      </p>
+
+    </section>
+
+
+    <!-- Why it matters -->
+
+    <section class="story-section">
+
+      <p class="section-eyebrow">
+        Why it matters
+      </p>
+
+      <h2 class="section-title">
+        Understanding transitions at age 18
+      </h2>
+
+      <div class="story-text">
+
+        <p>
+          Age 18 is an important transition point between compulsory schooling
+          and later education, training and employment. Knowing a young person’s
+          destination at this point tells us what happened, but not how clearly
+          it could have been distinguished beforehand or whether some
+          destinations are harder to identify than others.
+        </p>
+
+        <p>
+          For researchers and analysts, multiclass classification helps show how
+          performance varies across destinations and whether different models
+          add useful predictive information. For policy-oriented users, it helps
+          show where the available pre-transition information is more informative
+          and where gaps remain.
+        </p>
+
+        <p>
+          This project examines four age-18 destinations —
+          <strong>Education, Employment, Apprenticeship or training, and NEET</strong>
+          — using information available before transition. It compares MLR,
+          Random Forest and XGBoost and examines what the available information
+          can tell us about differences between these destinations.
+        </p>
+
+      </div>
+
+
+      <div class="thought-path">
+
+        <h3>
+          A thought path through the project
+        </h3>
+
+        <p>
+          As you move through the analysis, keep these questions in mind:
+        </p>
+
+        <ul>
+          <li>
+            <strong>Overall predictability:</strong>
+            How well can available pre-transition information distinguish the four destinations?
+          </li>
+
+          <li>
+            <strong>Destination differences:</strong>
+            Which destinations are easier or harder to classify?
+          </li>
+
+          <li>
+            <strong>Model comparison:</strong>
+            Do RF and XGBoost improve on MLR, and does this depend on the evaluation measure?
+          </li>
+
+          <li>
+            <strong>Predictive information:</strong>
+            Which predictor domains and individual predictors contribute most?
+          </li>
+
+          <li>
+            <strong>Earlier pathways:</strong>
+            What do preceding activity histories show about routes to the four destinations?
+          </li>
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- Study at a glance -->
+
+    <section class="study-section">
+
+      <p class="section-eyebrow">
+        Study at a glance
+      </p>
+
+      <div class="project-summary-grid">
+
+        <article class="summary-card">
+
+          <div class="summary-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <circle cx="9" cy="8" r="3"></circle>
+              <circle cx="16" cy="9" r="2.5"></circle>
+              <path d="M3.5 19c0-3.2 2.5-5.5 5.5-5.5s5.5 2.3 5.5 5.5"></path>
+              <path d="M14 14.5c.7-.4 1.5-.6 2.3-.6 2.4 0 4.2 1.8 4.2 4.3"></path>
+            </svg>
+          </div>
+
+          <p class="summary-value">
+            9,524
+          </p>
+
+          <h2 class="summary-label">
+            Modelling sample
+          </h2>
+
+          <p class="summary-detail">
+            Participants included in modelling
+          </p>
+
+        </article>
+
+
+        <article class="summary-card">
+
+          <div class="summary-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 6h16"></path>
+              <path d="M4 12h16"></path>
+              <path d="M4 18h16"></path>
+              <circle cx="9" cy="6" r="1.5"></circle>
+              <circle cx="15" cy="12" r="1.5"></circle>
+              <circle cx="11" cy="18" r="1.5"></circle>
+            </svg>
+          </div>
+
+          <p class="summary-value">
+            69
+          </p>
+
+          <h2 class="summary-label">
+            Pre-transition predictors
+          </h2>
+
+          <p class="summary-detail">
+            Representing 10 predictor domains
+          </p>
+
+        </article>
+
+
+        <article class="summary-card">
+
+          <div class="summary-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="5" r="2"></circle>
+              <path d="M12 7v5"></path>
+              <path d="M5 12h14"></path>
+              <path d="M5 12v4"></path>
+              <path d="M9.5 12v4"></path>
+              <path d="M14.5 12v4"></path>
+              <path d="M19 12v4"></path>
+              <circle cx="5" cy="18" r="1.5"></circle>
+              <circle cx="9.5" cy="18" r="1.5"></circle>
+              <circle cx="14.5" cy="18" r="1.5"></circle>
+              <circle cx="19" cy="18" r="1.5"></circle>
+            </svg>
+          </div>
+
+          <p class="summary-value">
+            4
+          </p>
+
+          <h2 class="summary-label">
+            Destination classes
+          </h2>
+
+          <p class="summary-detail">
+            Education · Employment · Apprenticeship or training · NEET
+          </p>
+
+        </article>
+
+
+        <article class="summary-card">
+
+          <div class="summary-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 19V5"></path>
+              <path d="M4 19h16"></path>
+              <path d="M8 16v-5"></path>
+              <path d="M12 16V7"></path>
+              <path d="M16 16v-8"></path>
+              <path d="M20 16v-4"></path>
+            </svg>
+          </div>
+
+          <p class="summary-value">
+            3
+          </p>
+
+          <h2 class="summary-label">
+            Core models
+          </h2>
+
+          <p class="summary-detail">
+            Multinomial logistic regression · Random forest · XGBoost
+          </p>
+
+        </article>
+
+      </div>
+
+
+      <div class="project-audience">
+        <p>
+          For policy analysts and researchers working on post-16 transitions,
+          and analysts interested in multiclass classification.
+        </p>
+      </div>
+
+
+      <div class="data-protection-note">
+
+        <div class="data-protection-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3l7 3v5c0 4.6-2.8 8-7 10-4.2-2-7-5.4-7-10V6l7-3z"></path>
+          </svg>
+        </div>
+
+        <p>
+          This project uses safeguarded Next Steps data.
+          Only anonymised or pre-aggregated outputs are presented.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Research questions -->
+
+    <section id="research-questions" class="research-focus-section">
+
+      <div class="research-focus-figure">
+        <img
+          src="assets/github_RQS.svg"
+          alt="Research questions, analytical approaches, evaluation focus and supporting interpretation for the study."
+        >
+      </div>
+
+    </section>
+
+
+    <!-- Analytical workflow -->
+
+    <section class="research-focus-section">
+
+      <div class="research-focus-figure">
+        <img
+          src="assets/github_workflow.svg"
+          alt="Analytical workflow from outcome and predictor construction through model development, held-out evaluation and interpretation."
+        >
+      </div>
+
+    </section>
+
+
+    <!-- Key findings -->
+
+    <section class="key-findings-section">
+
+      <p class="section-eyebrow">
+        Key findings
+      </p>
+
+      <h2 class="section-title">
+        What did the analysis show?
+      </h2>
+
+      <div class="key-findings-grid">
+
+        <article class="finding-card">
+
+          <p class="finding-highlight">
+            0.4378
+          </p>
+
+          <h3>
+            Highest held-out macro F1
+          </h3>
+
+          <p>
+            Random Forest achieved the highest held-out macro F1 among the three core models.
+          </p>
+
+        </article>
+
+
+        <article class="finding-card">
+
+          <p class="finding-highlight">
+            Different by destination
+          </p>
+
+          <h3>
+            Classification difficulty varied
+          </h3>
+
+          <p>
+            Education was classified most successfully, while Apprenticeship or training was the most difficult.
+          </p>
+
+        </article>
+
+
+        <article class="finding-card">
+
+          <p class="finding-highlight">
+            Metric trade-offs
+          </p>
+
+          <h3>
+            No single model dominated
+          </h3>
+
+          <p>
+            RF and XGBoost improved macro F1 over MLR, but this pattern did not extend to balanced accuracy.
+          </p>
+
+        </article>
+
+
+        <article class="finding-card">
+
+          <p class="finding-highlight">
+            Predictive information
+          </p>
+
+          <h3>
+            Aspirations and plans stood out
+          </h3>
+
+          <p>
+            Educational aspirations and post-16 plans showed the clearest predictor-domain contribution.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- Research questions answered -->
+
+    <section class="story-section">
+
+      <p class="section-eyebrow">
+        Research questions answered
+      </p>
+
+      <h2 class="section-title">
+        What do the findings mean for the three research questions?
+      </h2>
+
+
+      <div class="thought-path">
+
+        <h3>
+          RQ1. Overall predictability
+        </h3>
+
+        <p>
+          Available pre-transition characteristics provided limited ability to
+          distinguish the four age-18 destinations. Random Forest had the highest
+          held-out macro F1 among the core models at <strong>0.4378</strong>.
+        </p>
+
+      </div>
+
+
+      <div class="thought-path">
+
+        <h3>
+          RQ2. Differences across destinations
+        </h3>
+
+        <p>
+          Classification performance varied across destinations.
+          <strong>Education</strong> was classified most successfully, while
+          <strong>Apprenticeship or training</strong> was the most difficult
+          across models.
+        </p>
+
+      </div>
+
+
+      <div class="thought-path">
+
+        <h3>
+          RQ3. Additional predictive value of RF and XGBoost
+        </h3>
+
+        <p>
+          RF and XGBoost improved held-out macro F1 over MLR, but the gains were
+          modest and did not extend to balanced accuracy.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Closing perspective -->
+
+    <section class="story-section">
+
+      <p class="section-eyebrow">
+        Closing perspective
+      </p>
+
+      <h2 class="section-title">
+        Interpreting the project as a whole
+      </h2>
+
+      <div class="story-text">
+
+        <p>
+          Reflecting on the project, I initially expected the more complex ML
+          models to perform better and model comparison to produce a clearer
+          conclusion. Instead, the findings showed trade-offs across models,
+          metrics and destinations. This shifted my focus from identifying a
+          single best-performing model to interpreting those trade-offs.
+        </p>
+
+        <p>
+          I hope the study also contributes in three ways for its intended
+          research and policy-oriented users.
+        </p>
+
+      </div>
+
+
+      <div class="thought-path">
+
+        <h3>
+          Methodologically
+        </h3>
+
+        <p>
+          The study shows why multiclass model comparison should consider
+          class-specific performance, multiple metrics and separate validation
+          rather than relying on a single overall score.
+        </p>
+
+      </div>
+
+
+      <div class="thought-path">
+
+        <h3>
+          Conceptually
+        </h3>
+
+        <p>
+          The findings suggest that age-18 destinations differ in how clearly
+          they can be distinguished from the available pre-transition
+          information. The activity histories also show that the same age-18
+          destination can follow different preceding pathways.
+        </p>
+
+      </div>
+
+
+      <div class="thought-path">
+
+        <h3>
+          In terms of impact
+        </h3>
+
+        <p>
+          For research and policy-oriented users, the aggregate findings help
+          show where the available information is more informative, where gaps
+          remain and where further investigation may be needed.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Explore the artefact -->
+
+    <section class="explore-section">
+
+      <p class="section-eyebrow">
+        Explore the artefact
+      </p>
+
+      <h2 class="section-title">
+        Follow the analysis and supporting materials
+      </h2>
+
+      <div class="explore-grid">
+
+        <a
+          class="explore-card"
+          href="https://github.com/going-091/next-steps-age18-destination-classification/tree/main/notebooks"
+        >
+          <h3>Notebooks</h3>
+          <p>
+            Follow the staged analytical workflow and code.
+          </p>
+          <span>View notebooks →</span>
+        </a>
+
+
+        <a
+          class="explore-card"
+          href="https://github.com/going-091/next-steps-age18-destination-classification/tree/main/analysis_summaries"
+        >
+          <h3>Analysis summaries</h3>
+          <p>
+            Read concise summaries of each analytical stage.
+          </p>
+          <span>View summaries →</span>
+        </a>
+
+
+        <a
+          class="explore-card"
+          href="https://github.com/going-091/next-steps-age18-destination-classification#readme"
+        >
+          <h3>Repository guide</h3>
+          <p>
+            Explore the repository structure, notebook sequence and supporting documentation.
+          </p>
+          <span>View repository →</span>
+        </a>
+
+
+        <a
+          class="explore-card"
+          href="https://github.com/going-091/next-steps-age18-destination-classification/blob/main/data/README.md"
+        >
+          <h3>Data access</h3>
+          <p>
+            Read information about access to the safeguarded Next Steps data.
+          </p>
+          <span>View data information →</span>
+        </a>
+
+
+        <a
+          class="explore-card"
+          href="powerbi.html"
+        >
+          <h3>Power BI</h3>
+          <p>
+            View the completed reporting artefact and static report screenshots.
+          </p>
+          <span>View Power BI artefact →</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+</body>
+
+</html>
