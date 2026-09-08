@@ -431,6 +431,6 @@ Public interactive sharing was not available through the institutional Power BI 
 
 For a visual overview of the research questions, analytical workflow and main findings, see the **[project page →](https://going-091.github.io/next-steps-age18-destination-classification/)**.
 
+<br>
 
-
-Use of generative AI: Generative AI was used as a conversational support tool during the development of the technical artefacts. All analytical decisions, outputs and references were reviewed and verified by me.
+Generative AI was used as a conversational support tool during the development of the technical artefacts. All analytical decisions, outputs and references were reviewed and verified by me.
