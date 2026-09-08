@@ -1,0 +1,11 @@
+data_working/
+data_derived/
+raw_data/
+processed_data/
+
+*.csv
+*.sav
+*.dta
+*.xlsx
+
+.ipynb_checkpoints/
