@@ -20,9 +20,9 @@ body {
 
 .site-header-inner {
   width: min(1590px, calc(100% - 88px));
-  min-height: 78px;
+  min-height: 70px;
   margin: 0 auto;
-  padding: 18px 0;
+  padding: 14px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,14 +31,14 @@ body {
 .project-identity {
   display: flex;
   align-items: center;
-  gap: 14px;
-  font-size: clamp(1rem, 1.35vw, 1.45rem);
+  gap: 12px;
+  font-size: clamp(0.95rem, 1.15vw, 1.25rem);
 }
 
 .project-identity::before {
   content: "";
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   flex: 0 0 auto;
   border-radius: 50%;
   background: #07999d;
@@ -49,7 +49,7 @@ body {
 }
 
 .project-overview {
-  font-size: clamp(1rem, 1.35vw, 1.4rem);
+  font-size: clamp(0.95rem, 1.15vw, 1.2rem);
 }
 
 
@@ -64,14 +64,14 @@ main {
 /* Project title */
 
 .hero {
-  padding: 42px 0 52px;
+  padding: 34px 0 42px;
 }
 
 .eyebrow,
 .section-eyebrow {
-  margin: 0 0 14px;
+  margin: 0 0 11px;
   color: #16575b;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -81,7 +81,7 @@ h1 {
   margin: 0;
   max-width: 1400px;
   color: #07191d;
-  font-size: clamp(2.8rem, 4.25vw, 4.55rem);
+  font-size: clamp(2.45rem, 3.7vw, 3.9rem);
   line-height: 1.08;
   letter-spacing: -0.035em;
 }
@@ -89,17 +89,17 @@ h1 {
 h1::after {
   content: "";
   display: block;
-  width: 78px;
+  width: 68px;
   height: 4px;
-  margin-top: 22px;
+  margin-top: 18px;
   background: #15878a;
 }
 
 .subtitle {
-  margin: 22px 0 0;
+  margin: 18px 0 0;
   color: #485256;
-  font-size: clamp(1.1rem, 1.6vw, 1.5rem);
-  line-height: 1.55;
+  font-size: clamp(1rem, 1.35vw, 1.3rem);
+  line-height: 1.5;
 }
 
 .subtitle em {
@@ -110,84 +110,88 @@ h1::after {
 /* Story */
 
 .story-section {
-  padding: 58px 0 68px;
+  padding: 44px 0 52px;
   border-top: 1px solid #d9e1e1;
 }
 
 .section-title {
-  margin: 0 0 28px;
+  margin: 0 0 22px;
   color: #07191d;
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(1.8rem, 2.5vw, 2.55rem);
   line-height: 1.15;
 }
 
 .story-text {
   max-width: 1050px;
   color: #374447;
-  font-size: 1.08rem;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .story-text p {
-  margin: 0 0 18px;
+  margin: 0 0 15px;
 }
 
 .thought-path {
   max-width: 1100px;
-  margin-top: 38px;
-  padding: 28px 32px;
+  margin-top: 28px;
+  padding: 22px 26px;
   border-left: 4px solid #15878a;
   background: #f5f8f8;
 }
 
 .thought-path h3 {
-  margin: 0 0 8px;
+  margin: 0 0 7px;
   color: #172022;
-  font-size: 1.35rem;
+  font-size: 1.18rem;
 }
 
 .thought-path p {
-  margin: 0 0 16px;
+  margin: 0 0 13px;
   color: #566164;
+  font-size: 0.98rem;
+  line-height: 1.55;
 }
 
 .thought-path ul {
   margin: 0;
-  padding-left: 22px;
+  padding-left: 20px;
 }
 
 .thought-path li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #374447;
+  font-size: 0.98rem;
+  line-height: 1.5;
 }
 
 
 /* Study at a glance */
 
 .study-section {
-  padding: 62px 0 58px;
+  padding: 48px 0 48px;
   border-top: 1px solid #d9e1e1;
 }
 
 .project-summary-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
-  margin-top: 24px;
+  gap: 22px;
+  margin-top: 20px;
 }
 
 .summary-card {
-  min-height: 335px;
-  padding: 28px 32px;
+  min-height: 265px;
+  padding: 22px 24px;
   border: 1px solid #cbd3d4;
   border-radius: 10px;
   background: #ffffff;
 }
 
 .summary-icon {
-  width: 72px;
-  height: 72px;
-  margin-bottom: 18px;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 14px;
   color: #0a5054;
 }
 
@@ -202,25 +206,25 @@ h1::after {
 }
 
 .summary-value {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   color: #0a5054;
-  font-size: clamp(3rem, 4vw, 4rem);
+  font-size: clamp(2.5rem, 3.3vw, 3.25rem);
   font-weight: 700;
   line-height: 1;
 }
 
 .summary-label {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   color: #10191d;
-  font-size: clamp(1.1rem, 1.4vw, 1.4rem);
+  font-size: clamp(1.05rem, 1.2vw, 1.22rem);
   line-height: 1.3;
 }
 
 .summary-detail {
   margin: 0;
   color: #455155;
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  line-height: 1.45;
+  font-size: clamp(0.92rem, 1.05vw, 1.05rem);
+  line-height: 1.4;
 }
 
 
@@ -228,10 +232,10 @@ h1::after {
 
 .project-audience {
   max-width: 1100px;
-  margin: 24px auto 0;
+  margin: 20px auto 0;
   text-align: center;
   color: #172022;
-  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  font-size: clamp(0.95rem, 1.1vw, 1.08rem);
 }
 
 .project-audience p {
@@ -242,13 +246,13 @@ h1::after {
 /* Safeguarded data */
 
 .data-protection-note {
-  margin-top: 12px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   color: #16575b;
-  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  font-size: clamp(0.92rem, 1vw, 1.02rem);
 }
 
 .data-protection-note p {
@@ -256,8 +260,8 @@ h1::after {
 }
 
 .data-protection-icon {
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
   flex: 0 0 auto;
   color: #087074;
 }
@@ -276,7 +280,7 @@ h1::after {
 /* Research questions and workflow */
 
 .research-focus-section {
-  padding: 64px 0 72px;
+  padding: 48px 0 54px;
   border-top: 1px solid #d9e1e1;
 }
 
@@ -288,7 +292,7 @@ h1::after {
 .research-focus-figure img {
   display: block;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1160px;
   height: auto;
 }
 
@@ -296,62 +300,62 @@ h1::after {
 /* Key findings */
 
 .key-findings-section {
-  padding: 68px 0 82px;
+  padding: 52px 0 62px;
   border-top: 1px solid #d9e1e1;
 }
 
 .key-findings-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  gap: 18px;
 }
 
 .finding-card {
-  padding: 28px;
+  padding: 22px;
   border: 1px solid #cbd3d4;
   border-radius: 10px;
   background: #ffffff;
 }
 
 .finding-highlight {
-  margin: 0 0 14px;
+  margin: 0 0 11px;
   color: #0a5054;
-  font-size: 1.35rem;
+  font-size: 1.18rem;
   font-weight: 700;
   line-height: 1.25;
 }
 
 .finding-card h3 {
-  margin: 0 0 12px;
+  margin: 0 0 9px;
   color: #172022;
-  font-size: 1.2rem;
+  font-size: 1.08rem;
   line-height: 1.3;
 }
 
 .finding-card p:last-child {
   margin: 0;
   color: #566164;
-  font-size: 1rem;
-  line-height: 1.55;
+  font-size: 0.94rem;
+  line-height: 1.5;
 }
 
 
 /* Explore the artefact */
 
 .explore-section {
-  padding: 68px 0 88px;
+  padding: 52px 0 64px;
   border-top: 1px solid #d9e1e1;
 }
 
 .explore-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  gap: 18px;
 }
 
 .explore-card {
   display: block;
-  padding: 28px;
+  padding: 22px;
   border: 1px solid #cbd3d4;
   border-radius: 10px;
   background: #ffffff;
@@ -371,21 +375,22 @@ h1::after {
 }
 
 .explore-card h3 {
-  margin: 0 0 12px;
+  margin: 0 0 9px;
   color: #172022;
-  font-size: 1.25rem;
+  font-size: 1.12rem;
   line-height: 1.3;
 }
 
 .explore-card p {
-  margin: 0 0 20px;
+  margin: 0 0 15px;
   color: #566164;
-  font-size: 1rem;
-  line-height: 1.55;
+  font-size: 0.94rem;
+  line-height: 1.5;
 }
 
 .explore-card span {
   color: #0a6569;
+  font-size: 0.95rem;
   font-weight: 700;
 }
 
@@ -401,7 +406,7 @@ h1::after {
   }
 
   .summary-card {
-    min-height: 300px;
+    min-height: 245px;
   }
 }
 
@@ -409,7 +414,7 @@ h1::after {
 
   .site-header-inner {
     width: min(100% - 32px, 1590px);
-    min-height: 68px;
+    min-height: 64px;
   }
 
   .project-identity {
@@ -431,26 +436,35 @@ h1::after {
   }
 
   .hero {
-    padding-top: 36px;
+    padding: 30px 0 36px;
   }
 
   h1 {
-    font-size: 2.35rem;
+    font-size: 2.15rem;
   }
 
   .subtitle {
-    font-size: 1.05rem;
+    font-size: 1rem;
+  }
+
+  .story-section {
+    padding: 38px 0 44px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
   }
 
   .thought-path {
-    padding: 22px;
+    margin-top: 24px;
+    padding: 19px 20px;
   }
 
   .project-summary-grid,
   .key-findings-grid,
   .explore-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 15px;
   }
 
   .summary-card {
@@ -463,11 +477,11 @@ h1::after {
   }
 
   .research-focus-section {
-    padding: 42px 0 48px;
+    padding: 36px 0 40px;
   }
 
   .key-findings-section,
   .explore-section {
-    padding: 48px 0 56px;
+    padding: 40px 0 46px;
   }
 }
